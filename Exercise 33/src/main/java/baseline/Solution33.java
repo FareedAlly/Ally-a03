@@ -1,6 +1,12 @@
+/*
+ *  UCF COP3330 Fall 2021 Assignment 3 Solutions
+ *  Copyright 2021 Fareed Ally
+ */
+
 package baseline;
 
 import java.util.Scanner;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class Solution33
 {
@@ -8,30 +14,44 @@ public class Solution33
 
     private String answer()
     {
-        // Store answers in array
-        // Use rng and use if statements to match each random number with a response from the array
-        // Return response
+        String[] answers = {"Yes", "No", "Maybe", "Ask again later."};
+
+        int randomValue = ThreadLocalRandom.current().nextInt(1, 4+1);
+
+        if(randomValue == 1)
+        {
+            return answers[0];
+        }
+        else if(randomValue == 2)
+        {
+            return answers[1];
+        }
+        else if(randomValue == 3)
+        {
+            return answers[2];
+        }
+        else
+        {
+            return answers[3];
+        }
     }
 
-    private void initialQuestion()
+    private void initialQuestion(String prompt)
     {
-        // Ask for question
-        // Store question
+        System.out.println(prompt);
+
+        in.nextLine();
     }
 
-    private boolean subsequentQuestions()
-    {
-        // Ask if they want another question
-        // Use boolean value to track and see if the user enters yes
-        // Store new question
-    }
+
 
     public static void main(String[] args)
     {
+        Solution33 main = new Solution33();
 
-        // Use boolean value to track if game is done like last problem
-        // Use while loop to call all functions while game is still going on like last problem
+        main.initialQuestion("What's your question? ");
 
+        System.out.println(main.answer());
     }
 
 }
