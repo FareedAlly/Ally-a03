@@ -1,0 +1,5 @@
+
+Z	java:S106,"9Replace this use of System.out or System.err by a logger.(ÒÄ‚†ùÿÿÿÿ8¹È¾§Ä/
+Z	java:S106/"9Replace this use of System.out or System.err by a logger.(ªÓ¼áþÿÿÿÿ8¹È¾§Ä/
+A
+java:S1068"&Remove this unused "in" private field.(„ï”¸úÿÿÿÿ
