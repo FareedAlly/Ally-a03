@@ -17,7 +17,7 @@ class Solution29Test
     void output()
     {
 
-        assertEquals("Sorry. That's not a valid input. ", test.output("0"));
+        assertEquals("12", test.output("12"));
     }
 
 
