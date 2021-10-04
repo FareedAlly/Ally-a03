@@ -1,0 +1,18 @@
+
+S	java:S106"9Replace this use of System.out or System.err by a logger.(İÎ¤Âşÿÿÿÿ
+M	java:S106""9Replace this use of System.out or System.err by a logger.(ûƒİ
+
+S	java:S106+"9Replace this use of System.out or System.err by a logger.(Ÿé¬€şÿÿÿÿ
+S	java:S106k"9Replace this use of System.out or System.err by a logger.(¼×®Áúÿÿÿÿ
+N	java:S106q"9Replace this use of System.out or System.err by a logger.(£³±ç
+N	java:S106t"9Replace this use of System.out or System.err by a logger.(¡Ô˜
+Z	java:S106w"9Replace this use of System.out or System.err by a logger.(ŞÒ—üÿÿÿÿ8¯¶ÆÄ/
+[	java:S106™"9Replace this use of System.out or System.err by a logger.(¹É¥öÿÿÿÿÿ8£’¿ÆÄ/
+ƒ
+java:S13191"gThe type of "numbers" should be an interface such as "List" rather than the implementation "ArrayList".(¨¡·p8ŒºÆÆÄ/
+‰
+java:S1319="gThe type of "numbers" should be an interface such as "List" rather than the implementation "ArrayList".(†ÛÂ»øÿÿÿÿ8ÒÆÆÄ/
+„
+java:S1319L"gThe type of "numbers" should be an interface such as "List" rather than the implementation "ArrayList".(´î«¡8ÏğÆÆÄ/
+‰
+java:S1319["gThe type of "numbers" should be an interface such as "List" rather than the implementation "ArrayList".(……Ÿøÿÿÿÿ8ÈÇÆÄ/
