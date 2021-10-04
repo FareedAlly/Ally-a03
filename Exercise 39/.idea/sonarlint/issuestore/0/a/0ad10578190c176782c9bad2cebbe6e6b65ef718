@@ -1,0 +1,16 @@
+
+E
+java:S3740"/Provide the parametrized type for this generic.(ó‚ŞÃ
+J
+java:S3740"/Provide the parametrized type for this generic.(ÿ‰íÒûÿÿÿÿ
+J
+java:S3740*"/Provide the parametrized type for this generic.(ø‚úåùÿÿÿÿ
+N	java:S106>"9Replace this use of System.out or System.err by a logger.(€ˆ¿
+S	java:S106?"9Replace this use of System.out or System.err by a logger.(ï®Í‚úÿÿÿÿ
+N	java:S106C"9Replace this use of System.out or System.err by a logger.(‰ÆÏµ
+Š
+java:S1319"mThe return type of this method should be an interface such as "Map" rather than the implementation "HashMap".(ó‚ŞÃ8á€šÊÄ/
+
+java:S1319"mThe return type of this method should be an interface such as "Map" rather than the implementation "HashMap".(ÿ‰íÒûÿÿÿÿ8ÂšÊÄ/
+
+java:S1319*"mThe return type of this method should be an interface such as "Map" rather than the implementation "HashMap".(ø‚úåùÿÿÿÿ8Ú¶šÊÄ/
