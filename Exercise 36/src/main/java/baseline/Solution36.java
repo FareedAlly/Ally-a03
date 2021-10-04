@@ -1,3 +1,8 @@
+/*
+ *  UCF COP3330 Fall 2021 Assignment 3 Solutions
+ *  Copyright 2021 Fareed Ally
+ */
+
 package baseline;
 
 import java.util.ArrayList;
@@ -9,37 +14,109 @@ public class Solution36
 
     private double input()
     {
-        // Ask user to enter number and store value
-        // Use if statement to see if user enter done and stop asking for values
-        // Use if statements to make sure user enters valid inputs
+       String userInput;
+       double number = 0;
+
+       System.out.println("Enter a number: ");
+       userInput = in.nextLine();
+
+       if(userInput.equals("done"))
+       {
+           return -1;
+       }
+
+       try
+       {
+           number = Double.parseDouble(userInput);
+       }
+       catch(NumberFormatException invalidInput)
+       {
+           System.out.println("Enter a number or \"done\"");
+       }
+
+       if(number > 0)
+       {
+           return number;
+       }
+       else
+       {
+           System.out.println("Enter a positive number ");
+       }
+
+       return -2;
     }
 
-    private double average(ArrayList<Double> numbers)
+    public double average(ArrayList<Double> numbers)
     {
-        // Add up all the values using a for loop
-        // Divide by amount of numbers and return value
+        double numAverage = 0;
+
+        for(double number : numbers)
+        {
+            numAverage += number;
+        }
+
+        return numAverage / numbers.size();
     }
 
-    private double max(ArrayList<Double> numbers)
+    public double max(ArrayList<Double> numbers)
     {
-        // Use for loop and if statements to check if current value is higher than max value
-        // If it is, then assign it as max value and return it
+        double maxNumber = numbers.get(0);
+
+        for(double number : numbers)
+        {
+            if(number > maxNumber)
+            {
+                maxNumber = number;
+            }
+        }
+
+        return maxNumber;
     }
 
-    private double min(ArrayList<Double> numbers)
+    public double min(ArrayList<Double> numbers)
     {
-        // Same premise as max function except checking for min
+        double minNumber = numbers.get(0);
+
+        for(double number : numbers)
+        {
+            if(number < minNumber)
+            {
+                minNumber = number;
+            }
+        }
+
+        return minNumber;
     }
 
-    private double std(ArrayList<Double> numbers, double numAverage)
+    public double std(ArrayList<Double> numbers, double numAverage)
     {
-        // Calculate the standard deviation of each number in array
-        // return value
+        double numberStd = 0;
+
+        for(double number : numbers)
+        {
+            numberStd += Math.pow((number - numAverage), 2);
+        }
+
+        numberStd = numberStd / numbers.size();
+
+        return Math.sqrt(numberStd);
     }
 
     private void printAllNumbers(ArrayList<Double> numbers)
     {
-        // Use for loop to print each number in array
+        System.out.println("Numbers: ");
+
+        for(int i=0; i<numbers.size(); i++)
+        {
+            if(i > 0)
+            {
+                System.out.println(",");
+            }
+
+            System.out.printf("%.0f", numbers.get(i));
+        }
+
+        System.out.println("");
     }
 
 
@@ -48,11 +125,32 @@ public class Solution36
     {
         Solution36 main = new Solution36();
 
-        // Create arrayList
-        // Use while loop to keep getting numbers by calling function
-        // Break when done is entered
-        // Calculate all the values by calling the respective functions
-        // Print all the numbers and the results from each function.
+        ArrayList<Double> numbers = new ArrayList<>();
+
+        double nextNumber;
+
+        while(true)
+        {
+            nextNumber = main.input();
+
+            if(nextNumber == -1)
+            {
+                break;
+            }
+            else if(nextNumber > 0)
+            {
+                numbers.add(nextNumber);
+            }
+        }
+
+        double numAverage = main.average(numbers);
+        double numMax = main.max(numbers);
+        double numMin = main.min(numbers);
+        double numStd = main.std(numbers, numAverage);
+
+        main.printAllNumbers(numbers);
+
+        System.out.printf("The average is %.1f" + "%nThe minimum is %.0f" + "%nThe maximum is %.0f" + "%nThe standard deviation is %.2f%n", numAverage, numMin, numMax, numStd);
 
 
     }
